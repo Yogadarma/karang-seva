@@ -3,6 +3,7 @@
 import { ArrowRight } from "lucide-react";
 import { Reveal } from "@/components/motion/reveal";
 import { Button } from "@/components/ui/button";
+import { Eyebrow } from "@/components/ui/eyebrow";
 import { useContent } from "@/lib/language-context";
 
 const COPY = {
@@ -38,9 +39,7 @@ export function PricingTeaserSection() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_0.9fr]">
           <Reveal>
-            <span className="mb-3 inline-block font-mono text-xs uppercase tracking-wider text-primary-dark">
-              {t.eyebrow}
-            </span>
+            <Eyebrow>{t.eyebrow}</Eyebrow>
             <h2 className="text-3xl font-bold text-foreground md:text-4xl">{t.heading}</h2>
             <p className="mt-4 max-w-[52ch] text-muted">{t.sub}</p>
             <Button href="/paket-harga" size="lg" className="mt-8">

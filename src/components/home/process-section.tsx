@@ -1,6 +1,8 @@
 "use client";
 
 import { Reveal } from "@/components/motion/reveal";
+import { Eyebrow } from "@/components/ui/eyebrow";
+import { CircuitTexture } from "@/components/ui/circuit-texture";
 import { useContent } from "@/lib/language-context";
 
 const COPY = {
@@ -30,12 +32,11 @@ export function ProcessSection() {
   const t = useContent(COPY);
 
   return (
-    <section className="bg-navy py-24 text-white">
-      <div className="mx-auto max-w-6xl px-6">
+    <section className="relative overflow-hidden bg-navy py-24 text-white">
+      <CircuitTexture className="opacity-30" />
+      <div className="relative mx-auto max-w-6xl px-6">
         <Reveal className="max-w-xl">
-          <span className="mb-3 inline-block font-mono text-xs uppercase tracking-wider text-accent">
-            {t.eyebrow}
-          </span>
+          <Eyebrow tone="accent">{t.eyebrow}</Eyebrow>
           <h2 className="text-3xl font-bold md:text-4xl">{t.heading}</h2>
         </Reveal>
 

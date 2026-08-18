@@ -35,16 +35,16 @@ export function SiteHeader() {
   const copy = useContent(COPY);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-surface/90 backdrop-blur-md">
-      <div className="mx-auto flex h-18 max-w-6xl items-center justify-between px-6">
-        <Link href="/" className="flex items-center gap-2 font-semibold text-lg tracking-tight">
-          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-primary to-accent text-white text-sm font-bold">
+    <header className="sticky top-4 z-50 px-4">
+      <div className="mx-auto flex h-16 max-w-5xl items-center justify-between rounded-full border border-border bg-surface/80 px-5 shadow-lg shadow-black/20 backdrop-blur-md">
+        <Link href="/" className="flex items-center gap-2 font-semibold text-lg tracking-tight text-foreground">
+          <span className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-primary to-accent text-sm font-bold text-navy">
             KS
           </span>
           Karang Seva
         </Link>
 
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-7 md:flex">
           {nav.map((item) => (
             <Link
               key={item.href}
@@ -70,7 +70,7 @@ export function SiteHeader() {
           </Button>
           <button
             aria-label="Menu"
-            className="flex h-9 w-9 items-center justify-center md:hidden"
+            className="flex h-9 w-9 items-center justify-center text-foreground md:hidden"
             onClick={() => setOpen((v) => !v)}
           >
             {open ? <X /> : <Menu />}
@@ -79,7 +79,7 @@ export function SiteHeader() {
       </div>
 
       {open && (
-        <div className="flex flex-col gap-1 border-t border-border bg-surface px-6 py-4 md:hidden">
+        <div className="mx-auto mt-2 flex max-w-5xl flex-col gap-1 rounded-3xl border border-border bg-surface p-4 shadow-lg shadow-black/20 md:hidden">
           {nav.map((item) => (
             <Link
               key={item.href}

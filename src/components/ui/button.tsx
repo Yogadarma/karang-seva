@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 
 type BaseProps = {
   children: ReactNode;
-  variant?: "primary" | "outline" | "outline-light" | "ghost";
+  variant?: "primary" | "outline" | "ghost";
   size?: "md" | "lg";
   className?: string;
 };
@@ -14,9 +14,8 @@ type ButtonAsLink = BaseProps & {
 };
 
 const variants: Record<NonNullable<BaseProps["variant"]>, string> = {
-  primary: "bg-primary text-white hover:bg-primary-dark",
+  primary: "bg-primary text-navy hover:bg-primary-dark",
   outline: "border border-border text-foreground hover:bg-surface-alt",
-  "outline-light": "border border-white/30 text-white hover:bg-white/10",
   ghost: "text-foreground hover:bg-surface-alt",
 };
 

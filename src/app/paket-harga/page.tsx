@@ -4,6 +4,7 @@ import { Check, ArrowRight } from "lucide-react";
 import { PageHeader } from "@/components/layout/page-header";
 import { Reveal } from "@/components/motion/reveal";
 import { Button } from "@/components/ui/button";
+import { Eyebrow } from "@/components/ui/eyebrow";
 import { CtaSection } from "@/components/home/cta-section";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
 import { useContent } from "@/lib/language-context";
@@ -229,9 +230,7 @@ export default function PaketHargaPage() {
       <section className="border-t border-border bg-background py-20">
         <div className="mx-auto max-w-6xl px-6">
           <Reveal className="max-w-xl">
-            <span className="mb-3 inline-block font-mono text-xs uppercase tracking-wider text-primary-dark">
-              {custom.eyebrow}
-            </span>
+            <Eyebrow>{custom.eyebrow}</Eyebrow>
             <h2 className="text-2xl font-bold text-foreground md:text-3xl">{custom.heading}</h2>
           </Reveal>
 

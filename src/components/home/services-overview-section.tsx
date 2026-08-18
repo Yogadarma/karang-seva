@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { Reveal } from "@/components/motion/reveal";
+import { Eyebrow } from "@/components/ui/eyebrow";
 import { images, unsplashUrl } from "@/lib/stock-images";
 import { useContent } from "@/lib/language-context";
 
@@ -81,9 +82,7 @@ export function ServicesOverviewSection() {
     <section id="layanan" className="bg-background py-24">
       <div className="mx-auto max-w-6xl px-6">
         <Reveal className="max-w-xl">
-          <span className="mb-3 inline-block font-mono text-xs uppercase tracking-wider text-primary-dark">
-            {t.eyebrow}
-          </span>
+          <Eyebrow>{t.eyebrow}</Eyebrow>
           <h2 className="text-3xl font-bold text-foreground md:text-4xl">{t.heading}</h2>
           <p className="mt-4 text-muted">{t.sub}</p>
         </Reveal>

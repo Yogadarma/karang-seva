@@ -1,23 +1,23 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f7f7fb;
-  --surface: #ffffff;
-  --surface-alt: #eeecf7;
-  --foreground: #14121f;
-  --muted: #5c5870;
-  --border: #e1deee;
+  --background: #100e1c;
+  --surface: #18152a;
+  --surface-alt: #201b38;
+  --foreground: #f4f2fa;
+  --muted: #a79fc7;
+  --border: #2c2748;
 
-  --primary: #6c63ff;
-  --primary-dark: #4c3fe0;
-  --primary-soft: #ece9ff;
+  --primary: #7b72ff;
+  --primary-dark: #948cff;
+  --primary-soft: #241f44;
 
-  --accent: #00a884;
-  --accent-soft: #dff5ee;
+  --accent: #2fe0b0;
+  --accent-soft: #123a30;
 
-  --navy: #14122a;
-  --navy-soft: #211e3d;
-  --navy-border: #322f52;
+  --navy: #0a0912;
+  --navy-soft: #15121f;
+  --navy-border: #241f38;
 }
 
 @theme inline {
@@ -39,8 +39,8 @@
   --color-navy-soft: var(--navy-soft);
   --color-navy-border: var(--navy-border);
 
-  --font-sans: var(--font-plex-sans);
-  --font-mono: var(--font-plex-mono);
+  --font-sans: var(--font-outfit);
+  --font-mono: var(--font-jetbrains);
 }
 
 body {
@@ -51,9 +51,19 @@ body {
 h1, h2, h3, h4 {
   text-wrap: balance;
   letter-spacing: -0.01em;
+  font-family: var(--font-outfit);
 }
 
 ::selection {
   background: var(--primary);
   color: white;
+}
+
+.accent-underline {
+  display: inline;
+  white-space: nowrap;
+  background-image: linear-gradient(90deg, var(--accent), var(--primary));
+  background-repeat: no-repeat;
+  background-position: 0 92%;
+  background-size: 100% 0.32em;
 }

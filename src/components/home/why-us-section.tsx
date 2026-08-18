@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { Check } from "lucide-react";
 import { Reveal } from "@/components/motion/reveal";
+import { Eyebrow } from "@/components/ui/eyebrow";
 import { images, unsplashUrl } from "@/lib/stock-images";
 import { useContent } from "@/lib/language-context";
 
@@ -48,9 +49,7 @@ export function WhyUsSection() {
         </Reveal>
 
         <Reveal delay={0.1}>
-          <span className="mb-3 inline-block font-mono text-xs uppercase tracking-wider text-primary-dark">
-            {t.eyebrow}
-          </span>
+          <Eyebrow>{t.eyebrow}</Eyebrow>
           <h2 className="text-3xl font-bold text-foreground md:text-4xl">{t.heading}</h2>
           <p className="mt-4 max-w-[52ch] text-muted">{t.body}</p>
 

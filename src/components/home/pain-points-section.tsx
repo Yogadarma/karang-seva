@@ -2,6 +2,7 @@
 
 import { WifiOff, ShieldAlert, FileWarning, PhoneMissed } from "lucide-react";
 import { Reveal } from "@/components/motion/reveal";
+import { Eyebrow } from "@/components/ui/eyebrow";
 import { useContent } from "@/lib/language-context";
 
 const COPY = {
@@ -66,9 +67,7 @@ export function PainPointsSection() {
     <section className="border-t border-border bg-surface py-24">
       <div className="mx-auto max-w-6xl px-6">
         <Reveal className="max-w-xl">
-          <span className="mb-3 inline-block font-mono text-xs uppercase tracking-wider text-accent">
-            {t.eyebrow}
-          </span>
+          <Eyebrow tone="accent">{t.eyebrow}</Eyebrow>
           <h2 className="text-3xl font-bold text-foreground md:text-4xl">{t.heading}</h2>
         </Reveal>
 

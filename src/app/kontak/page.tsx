@@ -115,7 +115,7 @@ export default function KontakPage() {
               </div>
               <button
                 type="submit"
-                className="inline-flex h-13 w-full items-center justify-center gap-2.5 rounded-full bg-primary px-7 text-base font-medium text-white transition-colors hover:bg-primary-dark sm:w-auto"
+                className="inline-flex h-13 w-full items-center justify-center gap-2.5 rounded-full bg-primary px-7 text-base font-medium text-navy transition-colors hover:bg-primary-dark sm:w-auto"
               >
                 <WhatsAppIcon className="h-4 w-4" />
                 {form.submit}
