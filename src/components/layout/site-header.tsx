@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { useLanguage, useContent } from "@/lib/language-context";
@@ -37,10 +38,8 @@ export function SiteHeader() {
   return (
     <header className="sticky top-4 z-50 px-4">
       <div className="mx-auto flex h-16 max-w-5xl items-center justify-between rounded-full border border-border bg-surface/80 px-5 shadow-lg shadow-black/20 backdrop-blur-md">
-        <Link href="/" className="flex items-center gap-2 font-semibold text-lg tracking-tight text-foreground">
-          <span className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-primary to-accent text-sm font-bold text-navy">
-            KS
-          </span>
+        <Link href="/" className="flex items-center gap-2.5 font-semibold text-lg tracking-tight text-foreground">
+          <Image src="/images/logo.png" alt="Karang Seva" width={36} height={36} className="h-9 w-9" />
           Karang Seva
         </Link>
 

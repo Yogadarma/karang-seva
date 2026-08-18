@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useContent } from "@/lib/language-context";
 
@@ -52,10 +53,8 @@ export function SiteFooter() {
       <div className="mx-auto max-w-6xl px-6 py-16">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-[1.3fr_1fr_1fr_1fr]">
           <div>
-            <div className="flex items-center gap-2 text-lg font-semibold text-white">
-              <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-primary to-accent text-white text-sm font-bold">
-                KS
-              </span>
+            <div className="flex items-center gap-2.5 text-lg font-semibold text-white">
+              <Image src="/images/logo.png" alt="Karang Seva" width={36} height={36} className="h-9 w-9" />
               Karang Seva
             </div>
             <p className="mt-4 max-w-xs text-sm leading-relaxed">{t.tagline}</p>

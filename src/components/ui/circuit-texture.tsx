@@ -24,8 +24,8 @@ export function CircuitTexture({ className = "" }: { className?: string }) {
       </g>
       <defs>
         <linearGradient id="circuitGrad" x1="0" y1="0" x2="1200" y2="800" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stopColor="#7b72ff" />
-          <stop offset="100%" stopColor="#2fe0b0" />
+          <stop offset="0%" stopColor="#1a8fa0" />
+          <stop offset="100%" stopColor="#29bed2" />
         </linearGradient>
       </defs>
     </svg>
