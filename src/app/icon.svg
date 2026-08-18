@@ -1,0 +1,23 @@
+<svg width="52" height="56" viewBox="0 0 52 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="shieldGrad" x1="0" y1="0" x2="52" y2="56" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#6c63ff"/>
+      <stop offset="100%" stop-color="#00d4aa"/>
+    </linearGradient>
+    <linearGradient id="shieldFill" x1="0" y1="0" x2="52" y2="56" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#6c63ff" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#00d4aa" stop-opacity="0.10"/>
+    </linearGradient>
+  </defs>
+  <path d="M26 3 L47 11 L47 30 C47 41 37 50 26 53 C15 50 5 41 5 30 L5 11 Z"
+        fill="url(#shieldFill)"
+        stroke="url(#shieldGrad)"
+        stroke-width="2.2"
+        stroke-linejoin="round"/>
+  <polyline points="15,28 22,36 37,19"
+            stroke="url(#shieldGrad)"
+            stroke-width="3.2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            fill="none"/>
+</svg>
