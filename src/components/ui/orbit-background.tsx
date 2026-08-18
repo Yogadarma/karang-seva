@@ -25,9 +25,9 @@ export function OrbitBackground({ className = "" }: { className?: string }) {
               cy="0"
               r={r}
               fill="none"
-              stroke="var(--border)"
+              stroke="var(--navy)"
               strokeWidth="1"
-              opacity="0.6"
+              opacity="0.15"
             />
           ))}
           {nodes.map((n, i) => {

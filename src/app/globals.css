@@ -1,23 +1,23 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0a1930;
-  --surface: #102542;
-  --surface-alt: #16304f;
-  --foreground: #eef3f8;
-  --muted: #90a0b8;
-  --border: #1d3252;
+  --background: #f6f9fb;
+  --surface: #ffffff;
+  --surface-alt: #eaf1f6;
+  --foreground: #0a1f3d;
+  --muted: #5a6b85;
+  --border: #dde6ee;
 
-  --primary: #29bed2;
-  --primary-dark: #6fe2f0;
-  --primary-soft: #0f3546;
+  --primary: #0c2a50;
+  --primary-dark: #1d4a80;
+  --primary-soft: #e6ebf2;
 
-  --accent: #29bed2;
-  --accent-soft: #0f3546;
+  --accent: #1aa8bf;
+  --accent-soft: #e3f6f9;
 
-  --navy: #060e1c;
-  --navy-soft: #0c1a2e;
-  --navy-border: #16283f;
+  --navy: #0c2a50;
+  --navy-soft: #16345c;
+  --navy-border: #234269;
 }
 
 @theme inline {
@@ -56,14 +56,14 @@ h1, h2, h3, h4 {
 
 ::selection {
   background: var(--primary);
-  color: var(--navy);
+  color: white;
 }
 
 .accent-underline {
   display: inline;
   white-space: nowrap;
-  background-image: linear-gradient(90deg, #1a8fa0, var(--primary-dark));
+  background-image: linear-gradient(90deg, #bdeef4, #7ddcea);
   background-repeat: no-repeat;
-  background-position: 0 92%;
-  background-size: 100% 0.32em;
+  background-position: 0 88%;
+  background-size: 100% 0.38em;
 }

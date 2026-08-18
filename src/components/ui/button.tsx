@@ -14,7 +14,7 @@ type ButtonAsLink = BaseProps & {
 };
 
 const variants: Record<NonNullable<BaseProps["variant"]>, string> = {
-  primary: "bg-primary text-navy hover:bg-primary-dark",
+  primary: "bg-primary text-white hover:bg-primary-dark",
   outline: "border border-border text-foreground hover:bg-surface-alt",
   ghost: "text-foreground hover:bg-surface-alt",
 };
