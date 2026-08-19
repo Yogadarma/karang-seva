@@ -29,26 +29,26 @@ const RETAINER = {
     tiers: [
       {
         name: "Basic",
-        local: "Rp 500.000",
-        premium: "Rp 1.500.000",
+        small: "Rp 500.000",
+        large: "Rp 1.500.000",
         points: ["1x kunjungan/bulan", "Respons WhatsApp < 4 jam"],
       },
       {
         name: "Standard",
-        local: "Rp 1.000.000",
-        premium: "Rp 3.000.000",
+        small: "Rp 1.000.000",
+        large: "Rp 3.000.000",
         points: ["2x kunjungan/bulan", "Respons WhatsApp < 2 jam", "Prioritas antrian"],
         featured: true,
       },
       {
         name: "Premium",
-        local: "Rp 2.000.000",
-        premium: "Rp 6.000.000",
+        small: "Rp 2.000.000",
+        large: "Rp 6.000.000",
         points: ["Kunjungan mingguan", "Dedicated contact", "Respons same-day"],
       },
     ],
-    localLabel: "Villa lokal / kantor kecil",
-    premiumLabel: "Villa expat / hotel / kantor menengah-besar",
+    smallLabel: "Villa/kantor skala kecil",
+    largeLabel: "Villa/hotel/kantor skala besar",
   },
   en: {
     title: "Monthly Retainer",
@@ -56,26 +56,26 @@ const RETAINER = {
     tiers: [
       {
         name: "Basic",
-        local: "Rp 500K",
-        premium: "Rp 1.5M",
+        small: "Rp 500K",
+        large: "Rp 1.5M",
         points: ["1 visit/month", "WhatsApp response < 4 hrs"],
       },
       {
         name: "Standard",
-        local: "Rp 1M",
-        premium: "Rp 3M",
+        small: "Rp 1M",
+        large: "Rp 3M",
         points: ["2 visits/month", "WhatsApp response < 2 hrs", "Priority queue"],
         featured: true,
       },
       {
         name: "Premium",
-        local: "Rp 2M",
-        premium: "Rp 6M",
+        small: "Rp 2M",
+        large: "Rp 6M",
         points: ["Weekly visits", "Dedicated contact", "Same-day response"],
       },
     ],
-    localLabel: "Local villa / small office",
-    premiumLabel: "Expat villa / hotel / mid-large office",
+    smallLabel: "Small-scale villa/office",
+    largeLabel: "Large-scale villa/hotel/office",
   },
 };
 
@@ -84,8 +84,8 @@ const ONE_TIME = {
     title: "Jasa Satu-Kali",
     desc: "Rate per jam untuk kunjungan lepas, tanpa retainer.",
     rows: [
-      { label: "Rate/jam — Local", value: "Rp 150.000–200.000" },
-      { label: "Rate/jam — Premium", value: "Rp 400.000–500.000" },
+      { label: "Rate/jam — Skala Kecil", value: "Rp 150.000–200.000" },
+      { label: "Rate/jam — Skala Besar", value: "Rp 400.000–500.000" },
       { label: "Handling fee hardware (flat, per invoice)", value: "Rp 100.000–150.000" },
       { label: "IT Health Check (assessment awal)", value: "Mulai dari Rp 300.000" },
     ],
@@ -95,8 +95,8 @@ const ONE_TIME = {
     title: "One-Time Services",
     desc: "Hourly rate for one-off visits, no retainer required.",
     rows: [
-      { label: "Hourly rate — Local", value: "Rp 150K–200K" },
-      { label: "Hourly rate — Premium", value: "Rp 400K–500K" },
+      { label: "Hourly rate — Small Scale", value: "Rp 150K–200K" },
+      { label: "Hourly rate — Large Scale", value: "Rp 400K–500K" },
       { label: "Hardware handling fee (flat, per invoice)", value: "Rp 100K–150K" },
       { label: "IT Health Check (initial assessment)", value: "Starting at Rp 300K" },
     ],
@@ -181,12 +181,12 @@ export default function PaketHargaPage() {
                   <h3 className="text-lg font-semibold text-foreground">{tier.name}</h3>
                   <div className="mt-4 space-y-1">
                     <div className="flex items-baseline justify-between font-mono">
-                      <span className="text-xs text-muted">{retainer.localLabel}</span>
-                      <span className="font-bold text-foreground">{tier.local}</span>
+                      <span className="text-xs text-muted">{retainer.smallLabel}</span>
+                      <span className="font-bold text-foreground">{tier.small}</span>
                     </div>
                     <div className="flex items-baseline justify-between font-mono">
-                      <span className="text-xs text-muted">{retainer.premiumLabel}</span>
-                      <span className="font-bold text-foreground">{tier.premium}</span>
+                      <span className="text-xs text-muted">{retainer.largeLabel}</span>
+                      <span className="font-bold text-foreground">{tier.large}</span>
                     </div>
                   </div>
                   <ul className="mt-5 space-y-2.5 border-t border-border/70 pt-5">

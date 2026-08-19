@@ -63,10 +63,12 @@ export function SiteHeader() {
           >
             {language === "id" ? "ID" : "EN"}
           </button>
-          <Button href={buildWhatsAppLink(copy.wa)} external size="md" className="hidden md:inline-flex">
-            <WhatsAppIcon className="h-4 w-4" />
-            {copy.cta}
-          </Button>
+          <div className="hidden md:block">
+            <Button href={buildWhatsAppLink(copy.wa)} external size="md">
+              <WhatsAppIcon className="h-4 w-4" />
+              {copy.cta}
+            </Button>
+          </div>
           <button
             aria-label="Menu"
             className="flex h-9 w-9 items-center justify-center text-slate-900 md:hidden"

@@ -5,7 +5,7 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { Reveal } from "@/components/motion/reveal";
 import { Eyebrow } from "@/components/ui/eyebrow";
-import { images, unsplashUrl } from "@/lib/stock-images";
+import { images, imageSrc } from "@/lib/stock-images";
 import { useContent } from "@/lib/language-context";
 
 const COPY = {
@@ -96,7 +96,7 @@ export function ServicesOverviewSection() {
               >
                 <div className="relative aspect-16/9 overflow-hidden">
                   <Image
-                    src={unsplashUrl(item.image.id, 700)}
+                    src={imageSrc(item.image, 700)}
                     alt={item.image.alt}
                     fill
                     sizes="(min-width: 640px) 50vw, 100vw"

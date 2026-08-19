@@ -4,14 +4,14 @@ import Image from "next/image";
 import { Check } from "lucide-react";
 import { Reveal } from "@/components/motion/reveal";
 import { Button } from "@/components/ui/button";
-import { unsplashUrl } from "@/lib/stock-images";
+import { imageSrc, type SiteImage } from "@/lib/stock-images";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
 import { useContent } from "@/lib/language-context";
 
 type ServiceDetailProps = {
   id: string;
   reverse?: boolean;
-  image: { id: string; alt: string };
+  image: SiteImage;
   content: {
     id: { title: string; desc: string; points: string[] };
     en: { title: string; desc: string; points: string[] };
@@ -37,7 +37,7 @@ export function ServiceDetail({ id, reverse, image, content }: ServiceDetailProp
         >
           <Reveal className="relative aspect-4/3 overflow-hidden rounded-3xl">
             <Image
-              src={unsplashUrl(image.id, 700)}
+              src={imageSrc(image, 700)}
               alt={image.alt}
               fill
               sizes="(min-width: 1024px) 40vw, 90vw"

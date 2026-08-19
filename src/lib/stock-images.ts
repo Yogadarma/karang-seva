@@ -1,10 +1,20 @@
 /**
- * Placeholder photography sourced from Unsplash — none of these depict an
- * actual Karang Seva client, project, or team member. Swap the `id` values
- * for real photos once available; no other code changes needed.
+ * Photography used across the site. Entries with `id` are Unsplash
+ * placeholders — none of these depict an actual Karang Seva client,
+ * project, or team member, swap for real photos once available. Entries
+ * with `src` are real local assets already supplied by the client.
  */
 export function unsplashUrl(photoId: string, width: number, quality = 80) {
   return `https://images.unsplash.com/photo-${photoId}?ixlib=rb-4.1.0&auto=format&fit=crop&w=${width}&q=${quality}`;
+}
+
+type UnsplashImage = { id: string; alt: string };
+type LocalImage = { src: string; alt: string };
+export type SiteImage = UnsplashImage | LocalImage;
+
+/** Resolve any SiteImage to a usable <Image src>, sizing Unsplash photos to `width`. */
+export function imageSrc(image: SiteImage, width: number) {
+  return "src" in image ? image.src : unsplashUrl(image.id, width);
 }
 
 export const images = {
@@ -13,8 +23,8 @@ export const images = {
     alt: "Modern minimalist building surrounded by tropical greenery",
   },
   consulting: {
-    id: "1542744173-8e7e53415bb0",
-    alt: "IT consultant presenting to a small business team",
+    src: "/images/konsultasi-it.jpeg",
+    alt: "Tim Karang Seva berdiskusi dengan klien dalam pakaian adat Bali",
   },
   customSoftware: {
     id: "1555066931-4365d14bab8c",
@@ -36,4 +46,4 @@ export const images = {
     id: "1604328727766-a151d1045ab4",
     alt: "Two people working on laptops in a sunlit modern office",
   },
-} as const;
+} satisfies Record<string, SiteImage>;
