@@ -22,6 +22,10 @@ export const images = {
     id: "1622015663084-307d19eabbbf",
     alt: "Modern minimalist building surrounded by tropical greenery",
   },
+  heroBanner: {
+    src: "/images/hero-bali.jpg",
+    alt: "Pura Ulun Danu Beratan saat matahari terbenam, Bali",
+  },
   consulting: {
     src: "/images/konsultasi-it.jpeg",
     alt: "Tim Karang Seva berdiskusi dengan klien dalam pakaian adat Bali",

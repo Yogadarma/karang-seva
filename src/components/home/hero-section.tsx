@@ -8,7 +8,7 @@ import { Eyebrow } from "@/components/ui/eyebrow";
 import { OrbitBackground } from "@/components/ui/orbit-background";
 import { WhatsAppIcon } from "@/components/icons/whatsapp-icon";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
-import { images, unsplashUrl } from "@/lib/stock-images";
+import { images, imageSrc } from "@/lib/stock-images";
 import { useContent } from "@/lib/language-context";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
@@ -80,7 +80,7 @@ export function HeroSection() {
         className="relative mx-6 mt-16 aspect-21/9 max-w-6xl overflow-hidden rounded-[2rem] border border-border shadow-xl shadow-black/10 md:mx-auto md:aspect-[21/8]"
       >
         <Image
-          src={unsplashUrl(images.heroProperty.id, 1400)}
+          src={imageSrc(images.heroBanner, 1400)}
           alt={t.imageAlt}
           fill
           preload
