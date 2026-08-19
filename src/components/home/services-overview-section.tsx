@@ -11,67 +11,67 @@ import { useContent } from "@/lib/language-context";
 const COPY = {
   id: {
     eyebrow: "Layanan",
-    heading: "Empat pilar yang kami kerjakan",
-    sub: "Setiap pilar bisa berdiri sendiri, atau digabung jadi satu paket sesuai kebutuhan properti/kantor Anda.",
+    heading: "Satu partner untuk kebutuhan IT properti Anda.",
+    sub: "Dari perencanaan sampai implementasi dan support, kami membantu membangun sistem yang sesuai kebutuhan operasional — bukan sekadar memasang perangkat.",
     items: [
       {
         slug: "konsultasi",
-        title: "Konsultasi IT",
-        desc: "Audit infrastruktur & roadmap teknologi yang vendor-netral — bukan jualan produk tertentu.",
+        title: "Konsultasi & IT Planning",
+        desc: "Audit kondisi IT Anda dan dapatkan rekomendasi yang jelas sebelum membeli perangkat, melakukan renovasi, atau membangun sistem baru.",
         image: images.consulting,
       },
       {
         slug: "software",
         title: "Software Custom",
-        desc: "POS, inventory, booking, hingga integrasi WhatsApp & payment — dibangun sesuai alur kerja Anda.",
+        desc: "Bangun sistem yang mengikuti workflow bisnis Anda — mulai dari dashboard internal, integrasi, automation, hingga aplikasi khusus.",
         image: images.customSoftware,
       },
       {
         slug: "jaringan",
         title: "Jaringan & Internet",
-        desc: "Instalasi baru maupun perbaikan jaringan lama yang bermasalah, termasuk structured cabling.",
+        desc: "Wi-Fi dan jaringan yang stabil, terencana, dan siap digunakan oleh tim, tenant, maupun tamu.",
         image: images.network,
       },
       {
         slug: "cctv",
         title: "CCTV & Keamanan",
-        desc: "Kamera, access control, dan intercom — terintegrasi dan benar-benar bisa diandalkan.",
+        desc: "Sistem CCTV yang mudah dipantau, memiliki recording yang jelas, dan dirancang berdasarkan kebutuhan area serta operasional.",
         image: images.cctv,
       },
     ],
-    cta: "Lihat detail",
+    cta: "Pelajari Layanan",
   },
   en: {
     eyebrow: "Services",
-    heading: "The four pillars we work on",
-    sub: "Each pillar stands on its own, or bundle them into one package that fits your property or office.",
+    heading: "One partner for your property's IT needs.",
+    sub: "From planning to implementation and support, we help build systems that fit your operations — not just install equipment.",
     items: [
       {
         slug: "konsultasi",
-        title: "IT Consulting",
-        desc: "Vendor-neutral infrastructure audits & technology roadmaps — not a pitch for a specific product.",
+        title: "Consulting & IT Planning",
+        desc: "Audit your current IT setup and get clear recommendations before buying equipment, renovating, or building a new system.",
         image: images.consulting,
       },
       {
         slug: "software",
         title: "Custom Software",
-        desc: "POS, inventory, booking, WhatsApp & payment integration — built around your actual workflow.",
+        desc: "Build systems that follow your business workflow — from internal dashboards and integrations to automation and dedicated apps.",
         image: images.customSoftware,
       },
       {
         slug: "jaringan",
         title: "Network & Internet",
-        desc: "New installations or fixes for troublesome existing networks, including structured cabling.",
+        desc: "Stable, well-planned Wi-Fi and networking ready for your team, tenants, and guests alike.",
         image: images.network,
       },
       {
         slug: "cctv",
         title: "CCTV & Security",
-        desc: "Cameras, access control, and intercom — integrated and actually reliable.",
+        desc: "CCTV systems that are easy to monitor, with clear recording, designed around your area and operational needs.",
         image: images.cctv,
       },
     ],
-    cta: "See details",
+    cta: "Learn More",
   },
 };
 
@@ -79,7 +79,7 @@ export function ServicesOverviewSection() {
   const t = useContent(COPY);
 
   return (
-    <section id="layanan" className="bg-background py-24">
+    <section id="layanan" className="scroll-mt-28 bg-background py-16">
       <div className="mx-auto max-w-6xl px-6">
         <Reveal className="max-w-xl">
           <Eyebrow>{t.eyebrow}</Eyebrow>
@@ -92,9 +92,9 @@ export function ServicesOverviewSection() {
             <Reveal key={item.slug} delay={i * 0.06}>
               <Link
                 href={`/layanan#${item.slug}`}
-                className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-surface transition-shadow hover:shadow-xl hover:shadow-primary/5"
+                className="group flex h-full flex-col overflow-hidden rounded-3xl border border-border bg-surface shadow-md shadow-black/5 transition-shadow hover:shadow-xl hover:shadow-primary/10"
               >
-                <div className="relative aspect-16/9 overflow-hidden">
+                <div className="relative aspect-4/3 overflow-hidden">
                   <Image
                     src={imageSrc(item.image, 700)}
                     alt={item.image.alt}

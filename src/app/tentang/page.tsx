@@ -53,7 +53,7 @@ const APPROACH = {
       },
       {
         title: "Dwibahasa",
-        desc: "Komunikasi Indonesia & English, untuk klien lokal maupun pemilik bisnis expat di Bali.",
+        desc: "Komunikasi dalam Bahasa Indonesia & English, disesuaikan dengan kebutuhan Anda.",
       },
       {
         title: "Fleksibel, tanpa mengikat",
@@ -74,7 +74,7 @@ const APPROACH = {
       },
       {
         title: "Bilingual",
-        desc: "Communication in Indonesian & English, for local clients and expat business owners in Bali alike.",
+        desc: "Communication in Indonesian & English, tailored to what you need.",
       },
       {
         title: "Flexible, never locked in",
@@ -93,7 +93,7 @@ export default function TentangPage() {
     <>
       <PageHeader eyebrow={header.eyebrow} heading={header.heading} sub={header.sub} />
 
-      <section className="bg-background py-20">
+      <section className="bg-background py-14">
         <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-14 px-6 lg:grid-cols-[1fr_0.9fr]">
           <Reveal>
             <h2 className="text-2xl font-bold text-foreground md:text-3xl">{story.heading}</h2>
@@ -115,7 +115,7 @@ export default function TentangPage() {
         </div>
       </section>
 
-      <section className="border-t border-border bg-surface py-20">
+      <section className="border-t border-border bg-surface py-14">
         <div className="mx-auto max-w-6xl px-6">
           <Reveal>
             <h2 className="text-2xl font-bold text-foreground md:text-3xl">{approach.heading}</h2>

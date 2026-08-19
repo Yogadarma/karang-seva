@@ -11,23 +11,23 @@ const COPY = {
   id: {
     eyebrow: "Kenapa Karang Seva",
     heading: "Karang — pelindung. Seva — pelayanan tulus.",
-    body: "Nama kami diambil dari karang laut yang melindungi pesisir, dan seva — pelayanan tanpa ego dalam budaya Bali. Filosofi itu yang kami bawa ke cara kami bekerja dengan properti dan kantor Anda.",
+    body: "Kami membangun sistem IT yang bukan hanya bekerja saat instalasi selesai, tetapi tetap dapat diandalkan saat operasional berjalan.",
     points: [
-      "Vendor-netral — rekomendasi berdasarkan kebutuhan Anda, bukan komisi dari brand tertentu",
-      "Komunikasi dwibahasa (Indonesia & English) untuk klien lokal maupun expat",
-      "Satu nomor WhatsApp untuk konsultasi, jaringan, CCTV, maupun software",
-      "Tanpa kontrak jangka panjang yang mengikat — retainer bulanan bisa disesuaikan",
+      "Solusi disesuaikan dengan kebutuhan property dan operasional",
+      "Komunikasi yang jelas dan mudah dipahami",
+      "Satu tim untuk jaringan, CCTV, software, dan support",
+      "Fokus pada solusi jangka panjang, bukan sekadar pemasangan",
     ],
   },
   en: {
     eyebrow: "Why Karang Seva",
     heading: "Karang — a shield. Seva — selfless service.",
-    body: "Our name comes from coral reef that protects the coastline, and seva — selfless service in Balinese culture. That philosophy shapes how we work with your property and office.",
+    body: "We build IT systems that don't just work on install day, but stay reliable while your operation is running.",
     points: [
-      "Vendor-neutral — recommendations based on your needs, not a commission from a specific brand",
-      "Bilingual communication (Indonesian & English) for local and expat clients alike",
-      "One WhatsApp number for consulting, networking, CCTV, or software",
-      "No binding long-term contracts — monthly retainers flex to your needs",
+      "Solutions tailored to your property and operations",
+      "Clear, easy-to-understand communication",
+      "One team for networking, CCTV, software, and support",
+      "Focused on long-term solutions, not just installation",
     ],
   },
 };
@@ -36,9 +36,9 @@ export function WhyUsSection() {
   const t = useContent(COPY);
 
   return (
-    <section className="bg-surface py-24">
+    <section className="bg-surface py-16">
       <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-16 px-6 lg:grid-cols-[0.9fr_1.1fr]">
-        <Reveal className="relative aspect-4/3 overflow-hidden rounded-3xl">
+        <Reveal className="relative aspect-4/3 overflow-hidden rounded-3xl shadow-lg shadow-black/10">
           <Image
             src={unsplashUrl(images.office.id, 700)}
             alt={images.office.alt}

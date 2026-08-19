@@ -9,24 +9,24 @@ import { useContent } from "@/lib/language-context";
 const COPY = {
   id: {
     eyebrow: "Paket & Harga",
-    heading: "Transparan untuk yang jelas, konsultasi untuk yang custom",
-    sub: "Retainer bulanan dan jasa satu-kali standar kami tampilkan apa adanya. Proyek besar seperti software custom atau jaringan properti baru — kami hitungkan dulu lewat konsultasi singkat.",
+    heading: "Harga jelas untuk kebutuhan rutin. Penawaran khusus untuk project custom.",
+    sub: "Pilih paket support bulanan atau konsultasikan kebutuhan project Anda untuk mendapatkan estimasi yang sesuai.",
     cta: "Lihat Paket & Harga",
     cards: [
-      { label: "Retainer Basic", value: "Rp 500rb", unit: "/bln" },
-      { label: "Retainer Standard", value: "Rp 1jt", unit: "/bln" },
-      { label: "Retainer Premium", value: "Rp 2jt", unit: "/bln" },
+      { label: "Retainer Basic", value: "Mulai Rp 500rb", unit: "/bln" },
+      { label: "Retainer Standard", value: "Mulai Rp 1jt", unit: "/bln" },
+      { label: "Retainer Premium", value: "Mulai Rp 2jt", unit: "/bln" },
     ],
   },
   en: {
     eyebrow: "Pricing",
-    heading: "Transparent where it's clear, a quote where it's custom",
-    sub: "Our monthly retainers and standard one-time services are listed as-is. Larger projects like custom software or a new property's network are scoped through a short consultation first.",
+    heading: "Clear pricing for routine needs. Custom quotes for custom projects.",
+    sub: "Pick a monthly support package, or consult your project's needs to get a matching estimate.",
     cta: "See Pricing",
     cards: [
-      { label: "Basic Retainer", value: "Rp 500K", unit: "/mo" },
-      { label: "Standard Retainer", value: "Rp 1M", unit: "/mo" },
-      { label: "Premium Retainer", value: "Rp 2M", unit: "/mo" },
+      { label: "Basic Retainer", value: "From Rp 500K", unit: "/mo" },
+      { label: "Standard Retainer", value: "From Rp 1M", unit: "/mo" },
+      { label: "Premium Retainer", value: "From Rp 2M", unit: "/mo" },
     ],
   },
 };
@@ -35,7 +35,7 @@ export function PricingTeaserSection() {
   const t = useContent(COPY);
 
   return (
-    <section className="bg-background py-24">
+    <section className="bg-background py-16">
       <div className="mx-auto max-w-6xl px-6">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_0.9fr]">
           <Reveal>
@@ -52,7 +52,7 @@ export function PricingTeaserSection() {
             {t.cards.map((card) => (
               <div
                 key={card.label}
-                className="flex items-center justify-between rounded-2xl border border-border bg-surface px-6 py-5"
+                className="flex items-center justify-between rounded-2xl border border-border bg-surface px-6 py-5 shadow-md shadow-black/5"
               >
                 <span className="text-sm font-medium text-muted">{card.label}</span>
                 <span className="font-mono text-xl font-bold text-foreground">

@@ -25,20 +25,24 @@ const FORM_COPY = {
   id: {
     name: "Nama",
     namePh: "Nama Anda",
-    propertyType: "Jenis Properti",
-    propertyOptions: ["Villa", "Kantor", "Hotel/Resort", "Lainnya"],
-    message: "Ceritakan kebutuhannya",
+    whatsapp: "Nomor WhatsApp",
+    whatsappPh: "08xx-xxxx-xxxx",
+    needType: "Jenis Kebutuhan",
+    needOptions: ["Jaringan/Wi-Fi", "CCTV", "Software", "IT Support", "Konsultasi IT", "Lainnya"],
+    message: "Pesan Singkat",
     messagePh: "Contoh: jaringan WiFi villa sering putus, butuh CCTV untuk 6 titik...",
-    submit: "Kirim via WhatsApp",
+    submit: "Kirim & Konsultasikan",
   },
   en: {
     name: "Name",
     namePh: "Your name",
-    propertyType: "Property Type",
-    propertyOptions: ["Villa", "Office", "Hotel/Resort", "Other"],
-    message: "Tell us what you need",
+    whatsapp: "WhatsApp Number",
+    whatsappPh: "08xx-xxxx-xxxx",
+    needType: "Type of Need",
+    needOptions: ["Network/Wi-Fi", "CCTV", "Software", "IT Support", "IT Consultation", "Other"],
+    message: "Short Message",
     messagePh: "E.g. our villa's WiFi keeps dropping, need CCTV for 6 spots...",
-    submit: "Send via WhatsApp",
+    submit: "Send & Consult",
   },
 };
 
@@ -63,12 +67,13 @@ export default function KontakPage() {
   const info = useContent(INFO_COPY);
 
   const [name, setName] = useState("");
-  const [propertyType, setPropertyType] = useState(form.propertyOptions[0]);
+  const [whatsapp, setWhatsapp] = useState("");
+  const [needType, setNeedType] = useState(form.needOptions[0]);
   const [message, setMessage] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const composed = `${form.name}: ${name}\n${form.propertyType}: ${propertyType}\n\n${message}`;
+    const composed = `${form.name}: ${name}\n${form.whatsapp}: ${whatsapp}\n${form.needType}: ${needType}\n\n${message}`;
     window.open(buildWhatsAppLink(composed), "_blank", "noopener");
   };
 
@@ -76,7 +81,7 @@ export default function KontakPage() {
     <>
       <PageHeader eyebrow={header.eyebrow} heading={header.heading} sub={header.sub} />
 
-      <section className="bg-background py-20">
+      <section className="bg-background py-14">
         <div className="mx-auto grid max-w-5xl grid-cols-1 gap-14 px-6 lg:grid-cols-[1.1fr_0.9fr]">
           <Reveal>
             <form onSubmit={handleSubmit} className="space-y-5">
@@ -91,13 +96,24 @@ export default function KontakPage() {
                 />
               </div>
               <div>
-                <label className="mb-1.5 block text-sm font-medium text-foreground">{form.propertyType}</label>
+                <label className="mb-1.5 block text-sm font-medium text-foreground">{form.whatsapp}</label>
+                <input
+                  required
+                  type="tel"
+                  value={whatsapp}
+                  onChange={(e) => setWhatsapp(e.target.value)}
+                  placeholder={form.whatsappPh}
+                  className="w-full rounded-xl border border-border bg-surface px-4 py-3 text-sm text-foreground outline-none focus:border-primary"
+                />
+              </div>
+              <div>
+                <label className="mb-1.5 block text-sm font-medium text-foreground">{form.needType}</label>
                 <select
-                  value={propertyType}
-                  onChange={(e) => setPropertyType(e.target.value)}
+                  value={needType}
+                  onChange={(e) => setNeedType(e.target.value)}
                   className="w-full rounded-xl border border-border bg-surface px-4 py-3 text-sm text-foreground outline-none focus:border-primary"
                 >
-                  {form.propertyOptions.map((opt) => (
+                  {form.needOptions.map((opt) => (
                     <option key={opt} value={opt}>{opt}</option>
                   ))}
                 </select>
@@ -115,7 +131,7 @@ export default function KontakPage() {
               </div>
               <button
                 type="submit"
-                className="inline-flex h-13 w-full items-center justify-center gap-2.5 rounded-full bg-primary px-7 text-base font-medium text-navy transition-colors hover:bg-primary-dark sm:w-auto"
+                className="inline-flex h-13 w-full items-center justify-center gap-2.5 rounded-full bg-primary px-7 text-base font-medium text-white transition-colors hover:bg-primary-dark sm:w-auto"
               >
                 <WhatsAppIcon className="h-4 w-4" />
                 {form.submit}

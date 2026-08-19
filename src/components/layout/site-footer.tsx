@@ -49,7 +49,7 @@ export function SiteFooter() {
   const t = useContent(COPY);
 
   return (
-    <footer className="border-t border-navy-border bg-navy text-white/70">
+    <footer className="border-t border-navy-border bg-navy text-white/90">
       <div className="mx-auto max-w-6xl px-6 py-16">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-[1.3fr_1fr_1fr_1fr]">
           <div>

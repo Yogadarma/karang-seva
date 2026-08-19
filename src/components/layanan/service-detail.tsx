@@ -28,14 +28,14 @@ export function ServiceDetail({ id, reverse, image, content }: ServiceDetailProp
   const cta = useContent(CTA_COPY);
 
   return (
-    <section id={id} className="scroll-mt-20 border-b border-border py-20">
+    <section id={id} className="scroll-mt-20 border-b border-border py-14">
       <div className="mx-auto max-w-6xl px-6">
         <div
           className={`grid grid-cols-1 items-center gap-14 lg:grid-cols-[0.9fr_1.1fr] ${
             reverse ? "lg:[&>*:first-child]:order-2" : ""
           }`}
         >
-          <Reveal className="relative aspect-4/3 overflow-hidden rounded-3xl">
+          <Reveal className="relative aspect-4/3 overflow-hidden rounded-3xl shadow-lg shadow-black/10">
             <Image
               src={imageSrc(image, 700)}
               alt={image.alt}

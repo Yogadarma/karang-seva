@@ -12,13 +12,13 @@ import { useContent } from "@/lib/language-context";
 const HEADER = {
   id: {
     eyebrow: "Paket & Harga",
-    heading: "Transparan untuk yang jelas, konsultasi untuk yang custom",
-    sub: "Retainer bulanan dan jasa satu-kali standar kami tampilkan apa adanya. Proyek besar dan custom kami hitungkan dulu lewat konsultasi singkat — gratis, tanpa komitmen.",
+    heading: "Harga jelas untuk kebutuhan rutin. Penawaran khusus untuk project custom.",
+    sub: "Pilih paket support bulanan atau konsultasikan kebutuhan project Anda untuk mendapatkan estimasi yang sesuai.",
   },
   en: {
     eyebrow: "Pricing",
-    heading: "Transparent where it's clear, a quote where it's custom",
-    sub: "Our monthly retainers and standard one-time services are listed as-is. Larger, custom projects are scoped through a short consultation first — free, no commitment.",
+    heading: "Clear pricing for routine needs. Custom quotes for custom projects.",
+    sub: "Pick a monthly support package, or consult your project's needs to get a matching estimate.",
   },
 };
 
@@ -29,21 +29,21 @@ const RETAINER = {
     tiers: [
       {
         name: "Basic",
-        small: "Rp 500.000",
-        large: "Rp 1.500.000",
+        small: "Mulai Rp 500.000",
+        large: "Mulai Rp 1.500.000",
         points: ["1x kunjungan/bulan", "Respons WhatsApp < 4 jam"],
       },
       {
         name: "Standard",
-        small: "Rp 1.000.000",
-        large: "Rp 3.000.000",
+        small: "Mulai Rp 1.000.000",
+        large: "Mulai Rp 3.000.000",
         points: ["2x kunjungan/bulan", "Respons WhatsApp < 2 jam", "Prioritas antrian"],
         featured: true,
       },
       {
         name: "Premium",
-        small: "Rp 2.000.000",
-        large: "Rp 6.000.000",
+        small: "Mulai Rp 2.000.000",
+        large: "Mulai Rp 6.000.000",
         points: ["Kunjungan mingguan", "Dedicated contact", "Respons same-day"],
       },
     ],
@@ -56,21 +56,21 @@ const RETAINER = {
     tiers: [
       {
         name: "Basic",
-        small: "Rp 500K",
-        large: "Rp 1.5M",
+        small: "From Rp 500K",
+        large: "From Rp 1.5M",
         points: ["1 visit/month", "WhatsApp response < 4 hrs"],
       },
       {
         name: "Standard",
-        small: "Rp 1M",
-        large: "Rp 3M",
+        small: "From Rp 1M",
+        large: "From Rp 3M",
         points: ["2 visits/month", "WhatsApp response < 2 hrs", "Priority queue"],
         featured: true,
       },
       {
         name: "Premium",
-        small: "Rp 2M",
-        large: "Rp 6M",
+        small: "From Rp 2M",
+        large: "From Rp 6M",
         points: ["Weekly visits", "Dedicated contact", "Same-day response"],
       },
     ],
@@ -125,8 +125,8 @@ const CUSTOM = {
         from: "Mulai dari Rp 8.000.000",
       },
     ],
-    cta: "Minta Penawaran",
-    waMessage: "Halo Karang Seva, saya mau tanya penawaran untuk proyek custom.",
+    cta: "Konsultasikan Paket",
+    waMessage: "Halo Karang Seva, saya mau konsultasikan paket untuk proyek custom.",
   },
   en: {
     eyebrow: "Large & custom projects",
@@ -148,8 +148,8 @@ const CUSTOM = {
         from: "Starting at Rp 8M",
       },
     ],
-    cta: "Request a Quote",
-    waMessage: "Hi Karang Seva, I'd like a quote for a custom project.",
+    cta: "Consult Your Project",
+    waMessage: "Hi Karang Seva, I'd like to consult on a custom project.",
   },
 };
 
@@ -163,7 +163,7 @@ export default function PaketHargaPage() {
     <>
       <PageHeader eyebrow={header.eyebrow} heading={header.heading} sub={header.sub} />
 
-      <section className="bg-background py-20">
+      <section className="bg-background py-14">
         <div className="mx-auto max-w-6xl px-6">
           <Reveal>
             <h2 className="text-2xl font-bold text-foreground md:text-3xl">{retainer.title}</h2>
@@ -174,7 +174,7 @@ export default function PaketHargaPage() {
             {retainer.tiers.map((tier, i) => (
               <Reveal key={tier.name} delay={i * 0.06}>
                 <div
-                  className={`h-full rounded-2xl border p-7 ${
+                  className={`h-full rounded-3xl border p-7 shadow-md shadow-black/5 ${
                     tier.featured ? "border-primary bg-primary-soft" : "border-border bg-surface"
                   }`}
                 >
@@ -204,13 +204,13 @@ export default function PaketHargaPage() {
         </div>
       </section>
 
-      <section className="border-t border-border bg-surface py-20">
+      <section className="border-t border-border bg-surface py-14">
         <div className="mx-auto max-w-6xl px-6">
           <Reveal>
             <h2 className="text-2xl font-bold text-foreground md:text-3xl">{oneTime.title}</h2>
             <p className="mt-2 text-muted">{oneTime.desc}</p>
           </Reveal>
-          <Reveal delay={0.06} className="mt-8 overflow-hidden rounded-2xl border border-border bg-background">
+          <Reveal delay={0.06} className="mt-8 overflow-hidden rounded-3xl border border-border bg-background shadow-md shadow-black/5">
             {oneTime.rows.map((row, i) => (
               <div
                 key={row.label}
@@ -227,7 +227,7 @@ export default function PaketHargaPage() {
         </div>
       </section>
 
-      <section className="border-t border-border bg-background py-20">
+      <section className="border-t border-border bg-background py-14">
         <div className="mx-auto max-w-6xl px-6">
           <Reveal className="max-w-xl">
             <Eyebrow>{custom.eyebrow}</Eyebrow>
@@ -237,7 +237,7 @@ export default function PaketHargaPage() {
           <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
             {custom.items.map((item, i) => (
               <Reveal key={item.title} delay={i * 0.06}>
-                <div className="flex h-full flex-col rounded-2xl border border-border bg-surface p-7">
+                <div className="flex h-full flex-col rounded-3xl border border-border bg-surface p-7 shadow-md shadow-black/5">
                   <h3 className="text-lg font-semibold text-foreground">{item.title}</h3>
                   <p className="mt-2 flex-1 text-sm text-muted">{item.desc}</p>
                   <div className="mt-5 font-mono text-sm font-semibold text-primary-dark">{item.from}</div>
