@@ -23,8 +23,8 @@ export const images = {
     alt: "Modern minimalist building surrounded by tropical greenery",
   },
   heroBanner: {
-    src: "/images/hero-bali.jpg",
-    alt: "Pura Ulun Danu Beratan saat matahari terbenam, Bali",
+    src: "/images/hero-property.jpg",
+    alt: "Gerbang masuk villa yang ditangani Karang Seva saat senja",
   },
   consulting: {
     src: "/images/konsultasi-it.jpeg",
