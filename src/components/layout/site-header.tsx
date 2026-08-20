@@ -58,7 +58,7 @@ export function SiteHeader() {
         <div className="flex items-center gap-3">
           <button
             onClick={toggleLanguage}
-            className="hidden h-9 items-center rounded-full border border-slate-200 px-3 text-xs font-semibold text-slate-600 hover:text-slate-900 md:flex"
+            className="flex h-9 items-center rounded-full border border-slate-200 px-3 text-xs font-semibold text-slate-600 hover:text-slate-900"
             aria-label="Toggle language"
           >
             {language === "id" ? "ID" : "EN"}
@@ -91,12 +91,6 @@ export function SiteHeader() {
               {item.label}
             </Link>
           ))}
-          <button
-            onClick={toggleLanguage}
-            className="mt-1 rounded-lg px-2 py-2.5 text-left text-sm font-medium text-slate-600 hover:bg-slate-100"
-          >
-            {language === "id" ? "Switch to English" : "Ganti ke Bahasa Indonesia"}
-          </button>
           <Button href={buildWhatsAppLink(copy.wa)} external size="md" className="mt-2 w-full">
             <WhatsAppIcon className="h-4 w-4" />
             {copy.cta}
